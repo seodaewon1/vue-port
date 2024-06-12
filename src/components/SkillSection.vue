@@ -47,9 +47,9 @@ import { skillText } from '@/constants'
       font-weight: 900;
       line-height: 0.7;
       text-transform: uppercase;
-      color: var(--white);
+      color: var(--black);
       font-family: 'wooriDaum';
-      border-bottom: 0.4vw solid var(--white);
+      border-bottom: 0.4vw solid var(--black);
 
       @media (max-width: 800px) {
         width: 100%;
@@ -71,7 +71,7 @@ import { skillText } from '@/constants'
     }
 
     width: 50%;
-    color: var(--white);
+    color: var(--black);
 
     span {
       font-size: 5vw;
@@ -89,7 +89,7 @@ import { skillText } from '@/constants'
     p {
       margin-bottom: 30vh;
       font-size: 1.1rem;
-      color: var(--white100);
+      color: var(--black);
       line-height: 1.7;
       font-family: var(--mainKor-font);
 
