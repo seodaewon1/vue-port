@@ -55,7 +55,7 @@
       text-transform: uppercase;
       letter-spacing: -0.4vw;
       font-family: 'wooriDaum';
-      color: rgb(255, 255, 255);
+      color: var(--black);
     }
 
     .intro__lines {
@@ -92,38 +92,37 @@
       &.bottom {
         display: none;
 
-        @media (max-width: 800px) {
-          display: block;
-
-          //   &:nth-child(1) {
-          //     height: 20px;
-          //   }
-          //   &:nth-child(2) {
-          //     height: 17px;
-          //   }
-          //   &:nth-child(3) {
-          //     height: 13px;
-          //   }
-          //   &:nth-child(4) {
-          //     height: 10px;
-          //   }
-          //   &:nth-child(5) {
-          //     height: 5px;
-          //   }
-          //   &:nth-child(6) {
-          //     height: 2px;
-          //   }
-          //   &:nth-child(7) {
-          //     height: 1px;
-          //   }
-        }
+        // @media (max-width: 800px) {
+        //   display: block;
+        // }
+        // &:nth-child(1) {
+        //   height: 20px;
+        // }
+        // &:nth-child(2) {
+        //   height: 17px;
+        // }
+        // &:nth-child(3) {
+        //   height: 13px;
+        // }
+        // &:nth-child(4) {
+        //   height: 10px;
+        // }
+        // &:nth-child(5) {
+        //   height: 5px;
+        // }
+        // &:nth-child(6) {
+        //   height: 2px;
+        // }
+        // &:nth-child(7) {
+        //   height: 1px;
+        // }
       }
     }
     .intro__text {
       width: 100%;
       height: 40vh;
       background-color: #cfcfcf;
-      color: #063d3f;
+      color: var(--black);
       display: flex;
       align-items: center;
       justify-content: center;

@@ -3,19 +3,19 @@ import { headerNav } from '@/constants'
 </script>
 
 <template>
-  <header id="header" role="banner">
+  <header id="header" role="header">
     <div class="header__inner">
       <h1 class="header__logo">
-        <a href="#">portfolio <em>vue.js</em></a>
+        <a href="#">portfolio<em>vue.js</em></a>
       </h1>
       <div class="header__nav" :class="{ show: isNavVisible }" role="navigation" aria-label="메인 메뉴">
         <ul>
           <li v-for="(nav, key) in headerNav" :key="key">
-            <a :href="nav.url">{{ nav.title }}</a>
+            <a :href="nav.url" @click="scrollLink($event)">{{ nav.title }}</a>
           </li>
         </ul>
       </div>
-      <div class="header__nav__mobile" id="headerToggle" aria-controls="primary-menu" aria-expanded="false" role="button" @click="toggleMobileMenu">
+      <div class="header__nav__mobile" id="headerToggle" aria-controls="primary-menu" aria-expanded="false" role="button" tabindex="0" @click="toggleMobilMenu">
         <span></span>
       </div>
     </div>
@@ -30,8 +30,18 @@ export default {
     }
   },
   methods: {
-    toggleMobileMenu() {
+    toggleMobilMenu() {
       this.isNavVisible = !this.isNavVisible
+    },
+    scrollLink(event) {
+      event.preventDefault()
+
+      const targetId = event.target.getAttribute('href')
+      const targetElement = document.querySelector(targetId)
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' })
+      }
     }
   }
 }
@@ -45,7 +55,7 @@ export default {
 
   .header__inner {
     @include flex-between;
-    background-color: rgba(228, 228, 228, 0.836);
+    background-color: rgba(93, 107, 177, 0.623);
     backdrop-filter: blur(15px);
     padding: 1rem;
 
@@ -72,7 +82,7 @@ export default {
             position: absolute;
             right: 0;
             top: 68px;
-            background-color: rgba(116, 99, 99, 0.1);
+            background-color: rgba(39, 39, 39, 0.1);
             backdrop-filter: blur(15px);
             z-index: 10000;
             min-width: 150px;
